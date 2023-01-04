@@ -8,13 +8,15 @@ import reportWebVitals from './reportWebVitals';
 import {LoginComponent} from "./components/login/login.componet";
 import { NetflixIndex } from './netflix/netflix-index/netflix-index';
 import { NetflixHeader } from './netflix/netflix-header/netflix-header';
+import { DataBinding } from './components/data-binding/data-binding';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
      {/* -- <App />  */}
     {/* <LoginComponent /> */}
-    <NetflixIndex />
+    <DataBinding />
+    {/* <NetflixIndex /> */}
     {/* <NetflixHeader/> */}
   </React.StrictMode>
 );
