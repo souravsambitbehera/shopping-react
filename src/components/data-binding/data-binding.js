@@ -1,43 +1,91 @@
+import { useState } from "react";
 export function DataBinding () {
-    let courses = [
-        {Title:"React-Js",Poster:"logo512.png",Topics:["FrontEnd","Libary"]},
-        {Title:"Angular",Poster:"angular.png",Topics:["FrontEnd","FrameWork"]},
-        {Title:"Vue",Poster:"vue.png",Topics:["FrontEnd","FrameWork"]},
-        {Title:"Node-Js",Poster:"node-js.png",Topics:["BackEnd","FrameWork"]}
-    ]
-
+    const[userName,setUserName] = useState("");
+    function HandlerUserName (e) {
+        setUserName(e.target.value);
+    }
     return (
-        <div className="container-fluid">
-            <h2>Courses</h2>
-            <div className="d-flex flex-wrap">
-                {
-                    courses.map(course=> <div className="card m-2 p-2">
-                        <img src={course.Poster} alt="" className="card-img-top" height="150" width="150" />
-                        <div className="card-Header">
-                            <h3>{course.Title}</h3>
-                            </div>
-                            <div className="card-body">
-                                <ul>{
-                                    course.Topics.map(topic => <li>{topic}</li> )
-                                    }</ul>
-
-                            </div>
-                            <div className="card-footer">
-                                <button className="btn btn-primary w-100">Join Course</button>
-
-                            </div>
-
-                    </div>
-                        )
-                }
-
-            </div>
+        <div>
+            <dl>
+                <dt>User Name</dt>
+                <dd>
+                    <input type="text" onKeyUp={HandlerUserName} />
+                </dd>
+            </dl>
+            <p>hello {userName}</p>
         </div>
     )
 }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+// one way binding
+
+// {
+// const[userName,setUserName] = useState("sourav");
+// return (
+//     <div>
+//         <dl>
+//             <dt>userName</dt>
+//             <dd><input type="text" value={userName}/></dd>
+
+//         </dl>
+//         <p>Hey {userName}</p>
+//     </div>
+// )
+// }
+
+// {
+//     let courses = [
+//         {Title:"React-Js",Poster:"logo512.png",Topics:["FrontEnd","Libary"]},
+//         {Title:"Angular",Poster:"angular.png",Topics:["FrontEnd","FrameWork"]},
+//         {Title:"Vue",Poster:"vue.png",Topics:["FrontEnd","FrameWork"]},
+//         {Title:"Node-Js",Poster:"node-js.png",Topics:["BackEnd","FrameWork"]}
+//     ]
+
+//     return (
+//         <div className="container-fluid">
+//             <h2>Courses</h2>
+//             <div className="d-flex flex-wrap">
+//                 {
+//                     courses.map(course=> <div className="card m-2 p-2">
+//                         <img src={course.Poster} alt="" className="card-img-top" height="150" width="150" />
+//                         <div className="card-Header">
+//                             <h3>{course.Title}</h3>
+//                             </div>
+//                             <div className="card-body">
+//                                 <ul>{
+//                                     course.Topics.map(topic => <li>{topic}</li> )
+//                                     }</ul>
+
+//                             </div>
+//                             <div className="card-footer">
+//                                 <button className="btn btn-primary w-100">Join Course</button>
+
+//                             </div>
+
+//                     </div>
+//                         )
+//                 }
+
+//             </div>
+//         </div>
+//     )
+// }
+
+
+  
 
 
 
