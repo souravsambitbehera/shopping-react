@@ -1,29 +1,92 @@
 export function DataBinding () {
-    let menu = [
-        {Name:"sourav",Have:["Mobile","Laptop"]},
-        {Name:"Sambit",Have:["Tv","Pen"]}
+    let courses = [
+        {Title:"React-Js",Poster:"logo512.png",Topics:["FrontEnd","Libary"]},
+        {Title:"Angular",Poster:"angular.png",Topics:["FrontEnd","FrameWork"]},
+        {Title:"Vue",Poster:"vue.png",Topics:["FrontEnd","FrameWork"]},
+        {Title:"Node-Js",Poster:"node-js.png",Topics:["BackEnd","FrameWork"]}
     ]
+
     return (
-        <div>
-            <ul>
-            {
+        <div className="container-fluid">
+            <h2>Courses</h2>
+            <div className="d-flex flex-wrap">
+                {
+                    courses.map(course=> <div className="card m-2 p-2">
+                        <img src={course.Poster} alt="" className="card-img-top" height="150" width="150" />
+                        <div className="card-Header">
+                            <h3>{course.Title}</h3>
+                            </div>
+                            <div className="card-body">
+                                <ul>{
+                                    course.Topics.map(topic => <li>{topic}</li> )
+                                    }</ul>
 
-                menu.map(item => <li key={item}>{item.Name}
+                            </div>
+                            <div className="card-footer">
+                                <button className="btn btn-primary w-100">Join Course</button>
 
-                <ol>
-                    {
-                        item.Have.map(device => <li>
-                            {device}
-                        </li> )
-                    }
-                </ol>
-                
-                </li> )
-            }
-            </ul>
+                            </div>
+
+                    </div>
+                        )
+                }
+
+            </div>
         </div>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// {
+//     let menu = [
+//         {Name:"sourav",Have:["Mobile","Laptop"]},
+//         {Name:"Sambit",Have:["Tv","Pen"]}
+//     ]
+//     return (
+//         <div>
+//             <ul>
+//             {
+
+//                 menu.map(item => <li key={item}>{item.Name}
+
+//                 <ol>
+//                     {
+//                         item.Have.map(device => <li>
+//                             {device}
+//                         </li> )
+//                     }
+//                 </ol>
+                
+//                 </li> )
+//             }
+//             </ul>
+//         </div>
+//     )
+// }
 
 
 
