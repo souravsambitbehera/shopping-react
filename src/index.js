@@ -10,6 +10,8 @@ import { NetflixIndex } from './netflix/netflix-index/netflix-index';
 import { NetflixHeader } from './netflix/netflix-header/netflix-header';
 import { DataBinding } from './components/data-binding/data-binding'; 
 import { NasaComponent } from './components/nasa-component/nasa.component';
+import {ShoppingComponent} from './components/shopping/shopping.component';
+import { StyleDemoComponent } from './components/style-demo/styledemo.component';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,7 +22,11 @@ root.render(
     {/* <NetflixIndex /> */}
     {/* <NetflixHeader/> */}
 
-    <NasaComponent />
+    {/* <NasaComponent /> */}
+
+    {/* <ShoppingComponent/> */}
+    <StyleDemoComponent />
+
   </React.StrictMode>
 );
 
