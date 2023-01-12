@@ -1,9 +1,11 @@
 import axios from "axios";
+import { data } from "jquery";
 import { useState, useEffect } from "react";
 import './shopping.component.css'
 export function ShoppingComponent () {
     const[categories, setCategories] = useState([]);
     const[products, setProducts] = useState([]);
+    const[checkedOptions,setCheckedOptions]=useState([])
 
 
   
@@ -16,9 +18,24 @@ export function ShoppingComponent () {
     }
 
     function LoadProducts (url) {
-        axios.get(url)
-        .then(response =>{
-            setProducts(response.data);
+        fetch(url)
+        .then(response =>response.json())
+        .then(data =>{
+
+            
+            let result =data.filter(product =>{
+                if(checkedOptions.length==0){
+                    return true;
+                }
+                    for(let checkedOption in checkedOptions){
+                        if(product.category == checkedOptions[checkedOption] || checkedOptions[checkedOption]=="all"){
+                            return true;
+                        }
+                    }
+                    return false;
+                
+            });
+            setProducts(result);
         });
 
     }
@@ -27,6 +44,10 @@ export function ShoppingComponent () {
         LoadCategories();
         LoadProducts("https://fakestoreapi.com/products");
     },[]);
+    useEffect(()=>{
+        LoadProducts("https://fakestoreapi.com/products");
+        
+    },[checkedOptions]);
 
     function HandelCategoryChanged(e){
         if (e.target.value=="all"){
@@ -37,12 +58,17 @@ export function ShoppingComponent () {
         }
     }
     function HandelCheckBoxChanged(e){
-        if (e.target.checked){
-        LoadProducts(`https://fakestoreapi.com/products/category/${e.target.value}`);
-        }else{
-            LoadProducts(`https://fakestoreapi.com/products/category/${e.target.value}`);
+        if(e.target.checked==false){
+            setCheckedOptions(data =>{
+                return data.filter(HandelCheckBoxChanged => HandelCheckBoxChanged!==e.target.value)
+            });
 
+        }else{
+            setCheckedOptions(data =>{
+                return[...data,e.target.value]
+            });
         }
+       
     }
     
 
@@ -70,7 +96,7 @@ export function ShoppingComponent () {
                     <div className="mt-3">
                         <label className="form-label" htmlFor="">Choose Category </label>
                         <div>
-                            <ul onChange={HandelCategoryChanged}>
+                            <ul onChange={HandelCheckBoxChanged}>
                                 {
                                     categories.map(category =>
                                         <li key={category}>

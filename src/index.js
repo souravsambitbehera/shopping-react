@@ -24,8 +24,8 @@ root.render(
 
     {/* <NasaComponent /> */}
 
-    {/* <ShoppingComponent/> */}
-    <StyleDemoComponent />
+    <ShoppingComponent/>
+    {/* <StyleDemoComponent /> */}
 
   </React.StrictMode>
 );
