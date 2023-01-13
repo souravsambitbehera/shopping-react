@@ -12,6 +12,7 @@ import { DataBinding } from './components/data-binding/data-binding';
 import { NasaComponent } from './components/nasa-component/nasa.component';
 import {ShoppingComponent} from './components/shopping/shopping.component';
 import { StyleDemoComponent } from './components/style-demo/styledemo.component';
+import { EventComponent } from './components/event-component/event.component';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,8 +24,8 @@ root.render(
     {/* <NetflixHeader/> */}
 
     {/* <NasaComponent /> */}
-
-    <ShoppingComponent/>
+    <EventComponent />
+    {/* <ShoppingComponent/> */}
     {/* <StyleDemoComponent /> */}
 
   </React.StrictMode>
