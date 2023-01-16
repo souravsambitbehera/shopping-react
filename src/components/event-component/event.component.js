@@ -2,10 +2,13 @@ import { useState } from "react";
 export function EventComponent () {
     const[products] = useState([{id:1,name:"sourav"},{id:2,name:"sambit"}]);
 
-    function onClickButton (event) {
+    function OnClickButton (event) {
 
          let result = products.find(product =>
             product.id==event.target.id);
+            // result.splice((result.id-1),result.id)
+            // let delete_item = result.splice(result.id);
+            document.write(result)
             
     }
 
@@ -23,12 +26,12 @@ export function EventComponent () {
                 <tbody>
                     {
                         products.map(product =>
-                            <tr>
+                            <tr key={product.id}>
                                 <td>{product.id}</td>
                                 <td>{product.name}</td>
                                 <td>
-                                    <button  className="btn btn-danger"><span id={product.id} className="bi bi-trash" onClick={onClickButton}></span>
-                                
+                                    <button id={product.id} onClick={OnClickButton}  className="btn btn-danger"><span className="bi bi-trash"></span>
+                                    delete
                                     </button>
                                     <button className="btn btn-warning ms-2"><span className="bi bi-pen "></span></button>
 
