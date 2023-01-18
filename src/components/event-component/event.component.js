@@ -1,14 +1,14 @@
 import { useState } from "react";
 export function EventComponent () {
-    const[products] = useState([{id:1,name:"sourav"},{id:2,name:"sambit"}]);
+    const[products,setProducts] = useState([{id:1,name:"sourav"},{id:2,name:"sambit"}]);
 
     function OnClickButton (event) {
 
-         let result = products.find(product =>
-            product.id==event.target.id);
+        setProducts(products.filter(product =>
+            product.id !=event.target.id));
             // result.splice((result.id-1),result.id)
             // let delete_item = result.splice(result.id);
-            document.write(result)
+            // document.write(products.slice(result.id))
             
     }
 
