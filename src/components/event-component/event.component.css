@@ -4,6 +4,7 @@
 .phone_img_hover{
     height: 80px;
     width: 80px;
+    cursor: grab;
 }
 .phone_img_hover:hover{
     border: var(--border);
