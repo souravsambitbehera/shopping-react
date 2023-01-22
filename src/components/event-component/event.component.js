@@ -1,50 +1,84 @@
 import { useState } from "react";
 import "./event.component.css";
 export function EventComponent() {
-  const[userName, setUsername] = useState('');
-  const[userError,setUserError] = useState('')
+    
+  const[msg,setMsg] = useState('');
+  function msg1 () {
+    setMsg("Message 1");
+  }
+  function msg2 () {
+    setMsg("Message 2");
+  }
+  function msg3 () {
+    setMsg("Message 3");
+  }
+let m1,m2,m3;
 
-  function handelUserName (e){
-    setUsername(e.target.value)
-  }
-
-  function submitClick () {
-    if (userName==""){
-      setUserError("user name required")
-    }else{
-      document.write("hello  " + userName);
-    }
-  }
-  function handelBlur (){
-    if (userName==""){
-      setUserError("user name required")
-    }else{
-      setUserError("")
-    }  
-  }
-  function handelKeyUp (){
-    if (userName==""){
-      setUserError("user name required")
-    }else{
-      setUserError("")
-    }  
-  }
-
+  function handelOnClick () {
+   m1= setTimeout(msg1, 2000);
+   m2= setTimeout(msg2, 4000);
+   m3= setTimeout(msg3, 6000);  }
 
   return (
-    <div className="container-fluid">
-      <h2>User Login</h2>
-      <dl>
-        <dt>Username</dt>
-        <dd><input type="text" onChange={handelUserName} onBlur={handelBlur} onKeyUp={handelKeyUp} /></dd>
-        <dd className="text-danger">{userError}</dd>
-      </dl>
-      <button onClick={submitClick}>submit</button>
-
-
+    <div>
+        <h2>Click on button</h2>
+        <button onClick={handelOnClick} className="mb-10">button</button>
+        <p className="text-center">{msg}</p>
     </div>
   )
 }
+
+
+
+
+
+
+
+// {
+//   const[userName, setUsername] = useState('');
+//   const[userError,setUserError] = useState('')
+
+//   function handelUserName (e){
+//     setUsername(e.target.value)
+//   }
+
+//   function submitClick () {
+//     if (userName==""){
+//       setUserError("user name required")
+//     }else{
+//       document.write("hello  " + userName);
+//     }
+//   }
+//   function handelBlur (){
+//     if (userName==""){
+//       setUserError("user name required")
+//     }else{
+//       setUserError("")
+//     }  
+//   }
+//   function handelKeyUp (){
+//     if (userName==""){
+//       setUserError("user name required")
+//     }else{
+//       setUserError("")
+//     }  
+//   }
+
+
+//   return (
+//     <div className="container-fluid">
+//       <h2>User Login</h2>
+//       <dl>
+//         <dt>Username</dt>
+//         <dd><input type="text" onChange={handelUserName} onBlur={handelBlur} onKeyUp={handelKeyUp} /></dd>
+//         <dd className="text-danger">{userError}</dd>
+//       </dl>
+//       <button onClick={submitClick}>submit</button>
+
+
+//     </div>
+//   )
+// }
 
 
 
