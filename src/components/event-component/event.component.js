@@ -19,10 +19,15 @@ let m1,m2,m3;
    m2= setTimeout(msg2, 4000);
    m3= setTimeout(msg3, 6000);  }
 
+   function handleClickClear(){
+    clearTimeout(m2);
+   }
+
   return (
     <div>
         <h2>Click on button</h2>
         <button onClick={handelOnClick} className="mb-10">button</button>
+        <button onClick={handleClickClear}>Clear</button>
         <p className="text-center">{msg}</p>
     </div>
   )
