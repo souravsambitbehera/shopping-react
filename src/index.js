@@ -14,6 +14,7 @@ import {ShoppingComponent} from './components/shopping/shopping.component';
 import { StyleDemoComponent } from './components/style-demo/styledemo.component';
 import { EventComponent } from './components/event-component/event.component';
 import { BmiCalculator } from './components/bmi-calculator/bmi.calculator.component';
+import PropertiesComponent from './components/Properties_practice/properties.component';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -29,7 +30,8 @@ root.render(
 
     {/* <ShoppingComponent/> */}
     {/* <StyleDemoComponent /> */}
-    <BmiCalculator />
+    {/* <BmiCalculator /> */}
+    <PropertiesComponent />
   </React.StrictMode>
 );
 

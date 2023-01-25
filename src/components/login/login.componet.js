@@ -1,11 +1,11 @@
 import './login.component.css';
-export function LoginComponent () {
+export function LoginComponent (props) {
     return (
         <div id="form-container" className="container-fluid">
             <form action="">
-                <h1> <span className="bi bi-person-fill"></span> Login Form</h1>
+                <h1> <span className="bi bi-person-fill"></span>{props.form_name}</h1>
                 <div className="mb-2">
-                    <label htmlFor="" className="form-label">Username</label>
+                    <label htmlFor="" className="form-label">{props.user}</label>
                     <div>
                         <input type="text" className="form-control"/>
                     </div>
