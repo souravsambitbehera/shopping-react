@@ -16,6 +16,7 @@ import { EventComponent } from './components/event-component/event.component';
 import { BmiCalculator } from './components/bmi-calculator/bmi.calculator.component';
 import PropertiesComponent from './components/Properties_practice/properties.component';
 import { LifeCycleComponet } from './components/class-components/lifecycle.component';
+import FromValidation from './components/form-validation/form.validation.component';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -33,7 +34,8 @@ root.render(
     {/* <StyleDemoComponent /> */}
     {/* <BmiCalculator /> */}
     {/* <PropertiesComponent /> */}
-    <LifeCycleComponet/>
+    {/* <LifeCycleComponet/> */}
+    <FromValidation/>
   </React.StrictMode>
 );
 
