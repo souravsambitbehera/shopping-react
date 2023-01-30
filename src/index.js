@@ -17,6 +17,7 @@ import { BmiCalculator } from './components/bmi-calculator/bmi.calculator.compon
 import PropertiesComponent from './components/Properties_practice/properties.component';
 import { LifeCycleComponet } from './components/class-components/lifecycle.component';
 import FromValidation from './components/form-validation/form.validation.component';
+import FormikFromValidation from './components/form-validation/formik.validation.component';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -36,6 +37,7 @@ root.render(
     {/* <PropertiesComponent /> */}
     {/* <LifeCycleComponet/> */}
     <FromValidation/>
+    {/* <FormikFromValidation /> */}
   </React.StrictMode>
 );
 
