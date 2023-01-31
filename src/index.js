@@ -18,6 +18,8 @@ import PropertiesComponent from './components/Properties_practice/properties.com
 import { LifeCycleComponet } from './components/class-components/lifecycle.component';
 import FromValidation from './components/form-validation/form.validation.component';
 import FormikFromValidation from './components/form-validation/formik.validation.component';
+import { ValidationSchemaExample } from './components/form-validation/formik.yup.component';
+import FormikComponet from './components/form-validation/formik.component';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -36,8 +38,11 @@ root.render(
     {/* <BmiCalculator /> */}
     {/* <PropertiesComponent /> */}
     {/* <LifeCycleComponet/> */}
-    <FromValidation/>
+    {/* <FromValidation/> */}
     {/* <FormikFromValidation /> */}
+
+    {/* <ValidationSchemaExample /> */}
+    <FormikComponet />
   </React.StrictMode>
 );
 
