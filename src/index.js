@@ -20,6 +20,7 @@ import FromValidation from './components/form-validation/form.validation.compone
 import FormikFromValidation from './components/form-validation/formik.validation.component';
 import { ValidationSchemaExample } from './components/form-validation/formik.yup.component';
 import FormikComponet from './components/form-validation/formik.component';
+import { RouterExComponent } from './components/Router/RouterEx.component';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -42,7 +43,9 @@ root.render(
     {/* <FormikFromValidation /> */}
 
     {/* <ValidationSchemaExample /> */}
-    <FormikComponet />
+    {/* <FormikComponet /> */}
+    <RouterExComponent />
+
   </React.StrictMode>
 );
 
