@@ -1,0 +1,13 @@
+nav{
+    width: 80px;
+    height: 750px;
+    display: grid;
+    /* justify-content: space-around; */
+    background-color: #112e51;
+    color: white;
+    text-align: center;
+
+}
+.palfig{
+   margin-top: 8vh;
+}

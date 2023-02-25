@@ -21,6 +21,7 @@ import FormikFromValidation from './components/form-validation/formik.validation
 import { ValidationSchemaExample } from './components/form-validation/formik.yup.component';
 import FormikComponet from './components/form-validation/formik.component';
 import { RouterExComponent } from './components/Router/RouterEx.component';
+import { PallyIndex } from './task-project/pally_index/pally_index';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -44,7 +45,7 @@ root.render(
 
     {/* <ValidationSchemaExample /> */}
     {/* <FormikComponet /> */}
-    <RouterExComponent />
+    <PallyIndex />
 
   </React.StrictMode>
 );

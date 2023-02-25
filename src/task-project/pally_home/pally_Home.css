@@ -1,0 +1,56 @@
+*{
+    font-family:sans-serif;
+}
+.divide{
+    display: grid;
+    grid-template-columns: 1fr 5fr 6fr;
+    
+}
+.palletbuilder{
+    
+  
+   
+}
+.Pallyh h3{
+    font-weight: 500;
+    font-size: 48px;
+    color: gray;
+    margin-top: 8vh;
+}
+.Pallyh h1{
+    font-weight: 600;
+    font-size: 60px;
+}
+.Pallyh p {
+    font-family: Source Sans Pro,sans-serif;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.anchorl{
+    display: grid;
+    
+      
+}
+a:link {
+    text-decoration: none;
+  }
+  #newbtn{
+    margin-top: 6vh;
+    background-color: #112e51;
+    width: 100;
+    color: white;
+    padding: 20px;
+
+  }
+  #btn2{
+    width: 100; 
+    padding: 20px; 
+    border: 1px solid currentColor;  
+    color: black;
+    margin-top: 6vh;
+    margin-left: 2px;
+  }
+  .view{
+    margin-top: 7vh;
+  }
+
